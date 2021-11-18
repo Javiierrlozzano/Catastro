@@ -16,6 +16,7 @@ public class Startt extends javax.swing.JPanel {
      */
     public Startt() {
         initComponents();
+        
     }
 
     /**
