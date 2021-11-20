@@ -4,7 +4,9 @@
  */
 package HOME;
 
+import CLASS.MySQL_Query;
 import java.awt.Color;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -33,6 +35,7 @@ public class HOME extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         bdNuevo = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,6 +48,9 @@ public class HOME extends javax.swing.JFrame {
             }
         });
         jPanel1.add(bdNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, -1, -1));
+
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, -1, -1));
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -63,14 +69,14 @@ public class HOME extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bdNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdNuevoActionPerformed
-
+MySQL_Query Querys = new MySQL_Query(jLabel1);
     try{
-        panel = new JPanel();
-        panel.setSize(380,250);
-        panel.setBackground(Color.yellow);
-        jPanel1.add(panel);
-        panel.revalidate();
-        panel.repaint();
+        
+        Querys.Conexion();
+      ResultSet quers=  Querys.IniciosBD();
+        while(quers.next()){
+            System.out.println(quers.getString(1));
+        }
     }catch(Exception ex){
         JOptionPane.showMessageDialog(null,"Error" + ex.getMessage());}
 
@@ -113,6 +119,7 @@ public class HOME extends javax.swing.JFrame {
 JPanel  panel;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bdNuevo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
