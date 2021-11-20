@@ -71,7 +71,7 @@ public class HOME extends javax.swing.JFrame {
     private void bdNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdNuevoActionPerformed
 MySQL_Query Querys = new MySQL_Query(jLabel1);
     try{
-        
+        //Preubas
         Querys.Conexion();
       ResultSet quers=  Querys.IniciosBD();
         while(quers.next()){
