@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <name>Ruta9</name>
+        <description/>
+        <Style id="line-FFD600-2938-nodesc-normal">
+            <LineStyle>
+                <color>ff00d6ff</color>
+                <width>4.407</width>
+            </LineStyle>
+            <BalloonStyle>
+                <text><![CDATA[<h3>$[name]</h3>]]></text>
+            </BalloonStyle>
+        </Style>
+        <Style id="line-FFD600-2938-nodesc-highlight">
+            <LineStyle>
+                <color>ff00d6ff</color>
+                <width>4.407</width>
+            </LineStyle>
+            <BalloonStyle>
+                <text><![CDATA[<h3>$[name]</h3>]]></text>
+            </BalloonStyle>
+        </Style>
+        <StyleMap id="line-FFD600-2938-nodesc">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#line-FFD600-2938-nodesc-normal</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#line-FFD600-2938-nodesc-highlight</styleUrl>
+            </Pair>
+        </StyleMap>
+        <Folder>
+            <name>Ruta9.kml</name>
+            <Placemark>
+                <name>Ruta9</name>
+                <styleUrl>#line-FFD600-2938-nodesc</styleUrl>
+                <LineString>
+                    <tessellate>1</tessellate>
+                    <coordinates>
+                        -71.7385643,6.458232,0
+                        -71.73837,6.4582963,0
+                        -71.7382401,6.4583154,0
+                        -71.7381175,6.4583105,0
+                        -71.7379599,6.458383,0</coordinates>
+                </LineString>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>
