@@ -5,10 +5,18 @@
  */
 package HOME;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Insets;
 import javax.swing.border.Border;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
@@ -22,10 +30,15 @@ public class Estadisticas extends javax.swing.JInternalFrame {
     public Estadisticas() {
 
         initComponents();
-        BTN_HOY.setBorder(new RoundedBorder(15)); BTN_AYER.setBorder(new RoundedBorder(15)); BTN_MES.setBorder(new RoundedBorder(15));
-        BTN_SEMANA.setBorder(new RoundedBorder(15)); BTN_FECHA.setBorder(new RoundedBorder(15)); BTN_TODO.setBorder(new RoundedBorder(15));
-        BTN_USUARIOS.setBorder(new RoundedBorder(15)); BTN_BUSCAR.setBorder(new RoundedBorder(15));
-        
+        BTN_HOY.setBorder(new RoundedBorder(15));
+        BTN_AYER.setBorder(new RoundedBorder(15));
+        BTN_MES.setBorder(new RoundedBorder(15));
+        BTN_SEMANA.setBorder(new RoundedBorder(15));
+        BTN_FECHA.setBorder(new RoundedBorder(15));
+        BTN_TODO.setBorder(new RoundedBorder(15));
+        BTN_USUARIOS.setBorder(new RoundedBorder(15));
+        BTN_BUSCAR.setBorder(new RoundedBorder(15));
+
     }
 
     /**
@@ -39,7 +52,7 @@ public class Estadisticas extends javax.swing.JInternalFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         Home = new javax.swing.JPanel();
-        Panel_Ganancias = new javax.swing.JPanel();
+        PANEL_TOTAL_MEDIDORES = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -70,6 +83,9 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         jSeparator7 = new javax.swing.JSeparator();
         jLabel20 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        LBL_1 = new javax.swing.JLabel();
+        LBL_2 = new javax.swing.JLabel();
+        LBL_3 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
@@ -138,8 +154,11 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         logo_claro = new javax.swing.JLabel();
         logo_oscuro = new javax.swing.JLabel();
         EstadoPro = new javax.swing.JComboBox<>();
+        CAJA_1 = new javax.swing.JTextField();
+        CAJA_2 = new javax.swing.JTextField();
+        CAJA_3 = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(0, 0, 0));
         setBorder(null);
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -157,44 +176,45 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         });
         Home.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Panel_Ganancias.setBackground(new java.awt.Color(1, 1, 1));
-        Panel_Ganancias.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PANEL_TOTAL_MEDIDORES.setBackground(new java.awt.Color(1, 1, 1));
+        PANEL_TOTAL_MEDIDORES.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 214, 105));
         jLabel1.setText("0");
-        Panel_Ganancias.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, -1, -1));
+        PANEL_TOTAL_MEDIDORES.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(148, 148, 149));
         jLabel4.setText("hoy");
-        Panel_Ganancias.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(625, 30, -1, -1));
+        PANEL_TOTAL_MEDIDORES.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(625, 30, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("GANANCIAS");
-        Panel_Ganancias.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jLabel13.setText("TOTAL MEDIDORES POR MARCA");
+        PANEL_TOTAL_MEDIDORES.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 214, 105));
         jLabel14.setText("0");
-        Panel_Ganancias.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
-        Panel_Ganancias.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 90, 20));
+        PANEL_TOTAL_MEDIDORES.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        PANEL_TOTAL_MEDIDORES.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 90, 20));
 
         ESTRELLA_14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_saturn_planet_50px.png"))); // NOI18N
-        Panel_Ganancias.add(ESTRELLA_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, -1, -1));
+        PANEL_TOTAL_MEDIDORES.add(ESTRELLA_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, -1, -1));
 
         HOJA_14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_nature_50px.png"))); // NOI18N
-        Panel_Ganancias.add(HOJA_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, -1, -1));
+        PANEL_TOTAL_MEDIDORES.add(HOJA_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, -1, -1));
 
-        Home.add(Panel_Ganancias, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 670, 210));
+        Home.add(PANEL_TOTAL_MEDIDORES, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 670, 200));
 
         jPanel7.setBackground(new java.awt.Color(1, 1, 1));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("PRODUCTOS VENCIDOS");
+        jLabel22.setText("MEDIDORES PRÓXIMOS PARA CAMBIO");
+        jLabel22.setToolTipText("");
         jPanel7.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
@@ -208,7 +228,7 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         HOJA_16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_unchecked_checkbox_32px.png"))); // NOI18N
         jPanel7.add(HOJA_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 40, -1));
 
-        Home.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 420, 340, 110));
+        Home.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 390, 330, 140));
 
         jPanel8.setBackground(new java.awt.Color(1, 1, 1));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -225,19 +245,21 @@ public class Estadisticas extends javax.swing.JInternalFrame {
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("PRODUCTOS FACTURADOS");
+        jLabel24.setText("MEDIDORES EN TRANSICIÓN");
+        jLabel24.setToolTipText("ENTRE 1000 - 2000 METROS CÚBICOS");
         jPanel8.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        Home.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, 230, 110));
+        Home.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, 240, 140));
 
         jPanel9.setBackground(new java.awt.Color(1, 1, 1));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("PRODUCTOS PRÓXIMOS A ACABARSEN");
+        jLabel11.setText("TOTAL MEDIDORES PARA CAMBIO");
+        jLabel11.setToolTipText("MAYORES O IGUALES A 3000 METROS CÚBICOS");
         jPanel9.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-        jPanel9.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 90, 20));
+        jPanel9.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 90, 20));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(148, 148, 149));
@@ -255,26 +277,27 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         jPanel9.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
         ESTRELLA_15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_astronaut_40px.png"))); // NOI18N
-        jPanel9.add(ESTRELLA_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, -1, -1));
+        jPanel9.add(ESTRELLA_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
 
         HOJA_15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_penguin_40px_1.png"))); // NOI18N
-        jPanel9.add(HOJA_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, -1, -1));
+        jPanel9.add(HOJA_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
 
-        Home.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 200, 340, 210));
+        Home.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 180, 330, 200));
 
         jPanel10.setBackground(new java.awt.Color(1, 1, 1));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("PRODUCTOS VENDIDOS");
+        jLabel17.setText("TOTAL MEDIDORES ÓPTIMOS");
+        jLabel17.setToolTipText("DE 0 - 1000 NETROS CÚBICOS");
         jPanel10.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("0");
         jPanel10.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-        jPanel10.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 90, 20));
+        jPanel10.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 90, 20));
 
         jLabel20.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 214, 105));
@@ -286,7 +309,22 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         jLabel23.setText("hoy");
         jPanel10.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 140, -1, -1));
 
-        Home.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, 230, 210));
+        LBL_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        LBL_1.setForeground(new java.awt.Color(255, 255, 255));
+        LBL_1.setText("10");
+        jPanel10.add(LBL_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
+
+        LBL_2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        LBL_2.setForeground(new java.awt.Color(255, 255, 255));
+        LBL_2.setText("5");
+        jPanel10.add(LBL_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+
+        LBL_3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        LBL_3.setForeground(new java.awt.Color(255, 255, 255));
+        LBL_3.setText("3");
+        jPanel10.add(LBL_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
+
+        Home.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 180, 240, 200));
 
         jPanel11.setBackground(new java.awt.Color(1, 1, 1));
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -298,7 +336,7 @@ public class Estadisticas extends javax.swing.JInternalFrame {
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setText("TRABAJADORES");
+        jLabel28.setText("TOTAL MEDIDORES TIPO VOLUMÉTRICO");
         jPanel11.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel44.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -318,14 +356,14 @@ public class Estadisticas extends javax.swing.JInternalFrame {
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel29.setText("CLIENTES");
+        jLabel29.setText("TOTAL MEDIDORES TIPO CHORRO");
         jPanel12.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel30.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("0");
         jPanel12.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-        jPanel12.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 90, 20));
+        jPanel12.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 90, 20));
 
         jLabel31.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(0, 214, 105));
@@ -337,14 +375,14 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         jLabel32.setText("hoy");
         jPanel12.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(385, 40, -1, -1));
 
-        Home.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 440, 110));
+        Home.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 440, 140));
 
         jPanel13.setBackground(new java.awt.Color(1, 1, 1));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("PROVEEDORES");
+        jLabel33.setText("TOTAL CONSUMO");
         jPanel13.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
         jPanel13.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 90, 20));
 
@@ -366,14 +404,14 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         hoja_10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_comet_15px.png"))); // NOI18N
         jPanel13.add(hoja_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 20, 40));
 
-        Home.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, 220, 110));
+        Home.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 390, 220, 140));
 
         jPanel14.setBackground(new java.awt.Color(1, 1, 1));
         jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setText("TIENDAS");
+        jLabel37.setText("MEDIDORES OBSOLETOS");
         jPanel14.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel38.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
@@ -384,12 +422,12 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         jLabel46.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(0, 214, 105));
         jLabel46.setText("0");
-        jPanel14.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
+        jPanel14.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, -1, -1));
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(148, 148, 149));
         jLabel47.setText("hoy");
-        jPanel14.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 40, -1, -1));
+        jPanel14.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 57, -1, -1));
 
         Home.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 540, 220, 150));
 
@@ -398,7 +436,7 @@ public class Estadisticas extends javax.swing.JInternalFrame {
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setText("CANTIDAD DE PRODUCTOS EN BODEGA");
+        jLabel42.setText("TOTAL CONSUMO POR MARCAS");
         jPanel15.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel39.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
@@ -422,7 +460,6 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         BTN_HOY.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         BTN_HOY.setContentAreaFilled(false);
         BTN_HOY.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTN_HOY.setOpaque(false);
         BTN_HOY.setSelected(true);
         BTN_HOY.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -438,7 +475,6 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         BTN_AYER.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         BTN_AYER.setContentAreaFilled(false);
         BTN_AYER.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTN_AYER.setOpaque(false);
         Home.add(BTN_AYER, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 70, 30));
 
         BTN_SEMANA.setBackground(new java.awt.Color(102, 0, 102));
@@ -448,7 +484,6 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         BTN_SEMANA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         BTN_SEMANA.setContentAreaFilled(false);
         BTN_SEMANA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTN_SEMANA.setOpaque(false);
         Home.add(BTN_SEMANA, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 80, 30));
 
         BTN_MES.setBackground(new java.awt.Color(102, 0, 102));
@@ -458,7 +493,6 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         BTN_MES.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         BTN_MES.setContentAreaFilled(false);
         BTN_MES.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTN_MES.setOpaque(false);
         Home.add(BTN_MES, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, 70, 30));
 
         BTN_FECHA.setBackground(new java.awt.Color(102, 0, 102));
@@ -468,7 +502,6 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         BTN_FECHA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         BTN_FECHA.setContentAreaFilled(false);
         BTN_FECHA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTN_FECHA.setOpaque(false);
         Home.add(BTN_FECHA, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 70, 30));
 
         BTN_TODO.setBackground(new java.awt.Color(102, 0, 102));
@@ -478,7 +511,6 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         BTN_TODO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         BTN_TODO.setContentAreaFilled(false);
         BTN_TODO.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTN_TODO.setOpaque(false);
         Home.add(BTN_TODO, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 140, 70, 30));
 
         BTN_USUARIOS.setBackground(new java.awt.Color(102, 0, 102));
@@ -488,7 +520,6 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         BTN_USUARIOS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         BTN_USUARIOS.setContentAreaFilled(false);
         BTN_USUARIOS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTN_USUARIOS.setOpaque(false);
         Home.add(BTN_USUARIOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 140, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("STXinwei", 1, 36)); // NOI18N
@@ -542,10 +573,10 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         Home.add(HOJA_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
 
         ESTRELLA_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_rocket_40px.png"))); // NOI18N
-        Home.add(ESTRELLA_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 50, 50));
+        Home.add(ESTRELLA_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 50, 50));
 
         HOJA_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_cactus_40px.png"))); // NOI18N
-        Home.add(HOJA_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 50, 50));
+        Home.add(HOJA_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 50, 50));
 
         ESTRELLA_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_starfish_20px_2.png"))); // NOI18N
         Home.add(ESTRELLA_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 0, 30, 30));
@@ -578,7 +609,7 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         Home.add(HOJA_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 60, 50));
 
         ESTRELLAS_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_shooting_stars_50px_1.png"))); // NOI18N
-        Home.add(ESTRELLAS_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 60, 60));
+        Home.add(ESTRELLAS_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 60, 60));
 
         ESTRELLA_8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_starfish_10px_1.png"))); // NOI18N
         Home.add(ESTRELLA_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 10, 20, 20));
@@ -613,6 +644,15 @@ public class Estadisticas extends javax.swing.JInternalFrame {
         });
         Home.add(EstadoPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 670, 40));
 
+        CAJA_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Home.add(CAJA_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 40, -1));
+
+        CAJA_2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Home.add(CAJA_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 40, -1));
+
+        CAJA_3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Home.add(CAJA_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 40, -1));
+
         jScrollPane1.setViewportView(Home);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -644,7 +684,39 @@ public class Estadisticas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_HomeMouseClicked
 
     private void BTN_HOYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_HOYActionPerformed
-        // TODO add your handling code here:
+        int n1 = Integer.parseInt(CAJA_1.getText());
+        int n2 = Integer.parseInt(CAJA_2.getText());
+        int n3 = Integer.parseInt(CAJA_3.getText());
+
+        //CLASE PARA EL GRAFICO - Valores en mi objeto datos
+        DefaultCategoryDataset datos = new DefaultCategoryDataset();
+        datos.setValue(n1, "Materia", "Pedro");
+        datos.setValue(n1, "Materia", "Pablo");
+        datos.setValue(n1, "Materia", "Luis");
+
+        //CREANDO GRÁFICOS CON LA LIBRERIA Jfreechart - BARRAS EN 3D
+        JFreeChart grafico_barras = ChartFactory.createBarChart(
+                "Cantidad de medidores", //nombre del gráfico
+                "Medidores por marcas", //nombre de las barras
+                "", //nombre de la numeración
+                datos, //datos del gráfico
+                PlotOrientation.VERTICAL, //orientación
+                true, //legenda de barras individuales por color
+                true, //herramientas 
+                false //url del gráfico
+        );
+
+        //COLOCANDO GRÁFICO DE BARRAS EN EL PANEL CORRESPONDIENTE
+        ChartPanel panel = new ChartPanel(grafico_barras);   //Creo panel de tipochar panel y le asignamos el gráfico de barras creado anteriormente
+        panel.setMouseWheelEnabled(true);                    //Habilita la rueda del ratón para que se pueda manipular
+
+        panel.setPreferredSize(new Dimension(400, 200));     //Estableciendo dimención 400 ancho X 200 de alto para el panel
+        PANEL_TOTAL_MEDIDORES.setLayout(new BorderLayout()); //asignando border layout para poder manipular el panel
+        PANEL_TOTAL_MEDIDORES.add(panel, BorderLayout.NORTH); //Asignando el panel tipo Char al panel de estadísticos total de medidores
+
+        //ULTIMAS DOS LÍNEAS DE CÓDIGO IMPORTANTES PARA QUE SE VISUALIZE
+        pack();     //
+        repaint();
     }//GEN-LAST:event_BTN_HOYActionPerformed
     //CLASE BORDES REDONDEADOS
 
@@ -679,6 +751,9 @@ public class Estadisticas extends javax.swing.JInternalFrame {
     public javax.swing.JButton BTN_SEMANA;
     public javax.swing.JButton BTN_TODO;
     public javax.swing.JButton BTN_USUARIOS;
+    private javax.swing.JTextField CAJA_1;
+    private javax.swing.JTextField CAJA_2;
+    private javax.swing.JTextField CAJA_3;
     public javax.swing.JLabel ESTRELLAS_1;
     public javax.swing.JLabel ESTRELLA_10;
     public javax.swing.JLabel ESTRELLA_11;
@@ -715,7 +790,10 @@ public class Estadisticas extends javax.swing.JInternalFrame {
     public javax.swing.JLabel HOJA_8;
     public javax.swing.JLabel HOJA_9;
     public javax.swing.JPanel Home;
-    public javax.swing.JPanel Panel_Ganancias;
+    private javax.swing.JLabel LBL_1;
+    private javax.swing.JLabel LBL_2;
+    private javax.swing.JLabel LBL_3;
+    public javax.swing.JPanel PANEL_TOTAL_MEDIDORES;
     public javax.swing.JLabel hoja_10;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;

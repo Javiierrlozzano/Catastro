@@ -130,7 +130,7 @@ public class Startt2 extends javax.swing.JFrame {
         };
         Botones_Panel = Botones_Panel1;
         JPanel PanelEstadisticas1[] = {
-            Estadistica.Panel_Ganancias,
+            Estadistica.PANEL_TOTAL_MEDIDORES,
             Estadistica.jPanel10,
             Estadistica.jPanel8,
             Estadistica.jPanel9,
@@ -614,7 +614,7 @@ public class Startt2 extends javax.swing.JFrame {
 
         BTN_MENU.setForeground(new java.awt.Color(255, 255, 255));
         BTN_MENU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Menu_tres_lineas.png"))); // NOI18N
-        BTN_MENU.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BTN_MENU.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTN_MENU.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BTN_MENUMouseClicked(evt);
