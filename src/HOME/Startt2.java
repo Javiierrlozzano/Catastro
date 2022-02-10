@@ -15,6 +15,8 @@ import CLASES.GENERAL_CLASS;
 import CLASES.MySQL_Query;
 
 import HOME.*;
+import VISTA.FAMILIA2;
+import VISTA.FAMILIA3;
 
 
 import java.awt.Dimension;
@@ -42,18 +44,18 @@ public class Startt2 extends javax.swing.JFrame {
      * @param WinUser
      * @param WinConf
      */
-    public Startt2( ) {
+    public Startt2( FAMILIA2 WinFami,FAMILIA3 WinFamili3 ,Estadisticas es1 ) {
        // Querys =Querys1;
             initComponents();
             //api
          //   UnidadMedidas = WindFnidad;
-        //    Estadistica =es1;
+           Estadistica =es1;
        // JScrollBar barra  = new ScrollBar( );
             ScrollDesktop.getVerticalScrollBar().setUnitIncrement(15);
             ScrollDesktop.getHorizontalScrollBar().setUnitIncrement(15);
-       //     Familia1 = WinFm1;
-         //   Familia2 = WinFm2;
-           // WinFm3_1 = WinFm3;
+        Familia2 = WinFami;
+          Familia3 = WinFamili3;
+       
            
         //    WinCrearBG_1 = WinCrearBG;
         
@@ -71,13 +73,12 @@ public class Startt2 extends javax.swing.JFrame {
         };
         txtEstadisticas=txtEstadisticas1;
         JSeparator Separador1[]={
-            jSeparator3,jSeparator1,
+            /*jSeparator3,jSeparator1,
             Estadistica.jSeparator6,Estadistica.jSeparator7,
             Estadistica.jSeparator5,Estadistica.jSeparator8,
-            Estadistica.jSeparator9,Estadistica.jSeparator10
+            Estadistica.jSeparator9,Estadistica.jSeparator10*/
         };
           Separador=Separador1;
-                
             JLabel Estrellas1[]={Estadistica.ESTRELLA_4,Estadistica.ESTRELLAS_1,
             Estadistica.ESTRELLA_2,Estadistica.ESTRELLA_3,Estadistica.ESTRELLA_4,
             Estadistica.ESTRELLA_5,Estadistica.ESTRELLA_6,Estadistica. ESTRELLA_7,
@@ -157,8 +158,8 @@ public class Startt2 extends javax.swing.JFrame {
             jPanel3
         };
         Lateal=Lateal1;
-        
-        ActivarHojas(false);
+      
+        ActivarHojas(false);  
         Iconos_Off.setVisible(true);
         Iconos_True.setVisible(false);
         //////////////
@@ -198,6 +199,10 @@ public class Startt2 extends javax.swing.JFrame {
             });
         }
         CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas, Estadistica.Home, Lateal,Separador);
+    }
+
+    private Startt2() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     //Funcion para ModoClaro_Oscuro
@@ -833,7 +838,7 @@ CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas,
    
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-   //  general.AbrirJInternalFrame(Estadistica, DeskPanel, null, true);
+  general.AbrirJInternalFrame(Estadistica, DeskPanel, null, true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void BTN_CLIENTESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_CLIENTESActionPerformed
@@ -868,7 +873,7 @@ CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas,
     }//GEN-LAST:event_BtLicenciaActionPerformed
 
     private void BTN_VENTASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_VENTASActionPerformed
-    
+general.OpenWindows(Familia2, jPanel1);
      //   general.AbrirJInternalFrame(UnidadMedidas, DeskPanel, Querys, false);
        
 //general.OpenWindows(WinUser_1, jPanel1);
@@ -945,6 +950,7 @@ CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas,
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void BTN_ALMACENActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ALMACENActionPerformed
+general.OpenWindows(Familia3, jPanel1);
 //        general.AbrirJInternalFrame(Familia1, DeskPanel, Querys, false);
         // TODO add your handling code here:
     }//GEN-LAST:event_BTN_ALMACENActionPerformed
@@ -990,7 +996,8 @@ CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas,
     }
 
     public Estadisticas Estadistica;
- 
+        public FAMILIA3 Familia3;
+    public FAMILIA2 Familia2;
     public JSeparator Separador[];
     public  JLabel txtEstadisticas[];
     public JPanel Lateal[];

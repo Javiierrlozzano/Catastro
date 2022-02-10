@@ -6,6 +6,9 @@
 package CLASES;
 
 
+import HOME.Estadisticas;
+import VISTA.FAMILIA2;
+import VISTA.FAMILIA3;
 import java.io.File;
 
 import javax.xml.transform.Transformer;
@@ -56,6 +59,57 @@ import org.w3c.dom.Text;
  * @author JAVIER
  */
 public class GENERAL_CLASS {
+    
+    public void AbrirJInternalFrame(JInternalFrame Windows ,JDesktopPane Panel,MySQL_Query QuerySQL, boolean ActivarPanel){
+         try{
+            JInternalFrame[] pruebas = Panel.getAllFrames();
+            if (pruebas.length == 0) {
+             
+                 Windows.setVisible(true);
+                 Panel.add(Windows);
+            }
+            for (int i = 0; i < pruebas.length; i++) {
+            //Cada vez que se cree un InternalFrame Se tiene que hacer esta funcion.
+            if (!Windows.isVisible() ) {
+               if (Windows.getClass() == Estadisticas.class) {
+                    
+                    if (!Windows.isVisible()) {
+                       Windows= new Estadisticas(); 
+                       Windows.setVisible(true);
+                       Panel.add(Windows);
+                   }
+                   
+                } /*if  (Windows.getClass()== CrearUsuario.class){
+                       if (!Windows.isVisible()) {
+                       Windows= new CrearUsuario(QuerySQL,ActivarPanel); 
+                       Windows.setVisible(true);
+                       Panel.add(Windows);
+                   
+                }if  (Windows.getClass()== FAMILIA3.class){
+                       if (!Windows.isVisible()) {
+                       Windows= new FAMILIA3(QuerySQL,ActivarPanel); 
+                       Windows.setVisible(true);
+                       Panel.add(Windows);
+                   }
+                }
+                if  (Windows.getClass()== FAMILIA2.class){
+                       if (!Windows.isVisible()) {
+                       Windows= new FAMILIA2(QuerySQL,ActivarPanel); 
+                       Windows.setVisible(true);
+                       Panel.add(Windows);
+                   }
+                }}*/
+              
+            }
+         else{
+                System.out.println("ventana abierta ");
+            }
+            }
+        }catch(Exception ex){
+            System.out.println("error " +ex);
+        }
+    }
+    
     //Funcion para agregar nueva fila en JTable con Enter
     public void AgregarDatosJTableArry(JTable table,Object arry[] ){
         DefaultTableModel  modelo ;
