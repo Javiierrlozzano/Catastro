@@ -74,11 +74,11 @@ public class Login extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Dtas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Dtas.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         Dtas.setForeground(new java.awt.Color(255, 255, 255));
         Dtas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Dtas.setText("99 %");
-        getContentPane().add(Dtas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, -1, -1));
+        getContentPane().add(Dtas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, -1, -1));
 
         loadingbar.setBackground(new java.awt.Color(0, 204, 204));
         loadingbar.setForeground(new java.awt.Color(0, 204, 204));
@@ -93,13 +93,13 @@ public class Login extends javax.swing.JFrame {
                 loadingbarVetoableChange(evt);
             }
         });
-        getContentPane().add(loadingbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 510, 490, 16));
+        getContentPane().add(loadingbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 520, 492, 16));
 
-        loadingnum.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        loadingnum.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         loadingnum.setForeground(new java.awt.Color(255, 255, 255));
         loadingnum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         loadingnum.setText("99  %");
-        getContentPane().add(loadingnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 530, -1, 20));
+        getContentPane().add(loadingnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 540, -1, 20));
 
         Texto_Contraseña.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         Texto_Contraseña.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,7 +119,7 @@ public class Login extends javax.swing.JFrame {
         btnCerrar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnCerrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCerrar.setText("X");
-        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCerrarMouseClicked(evt);
@@ -130,7 +130,7 @@ public class Login extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton1.setText("Iniciar");
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -224,14 +224,14 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("+");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/IMAGENES/icons8_turtle_30px_1.png"))); // NOI18N
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 272, 20, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 288, -1, 30));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("-");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -241,9 +241,9 @@ public class Login extends javax.swing.JFrame {
 
         Fondo_Pantalla.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Fondo_Pantalla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Liggin.png"))); // NOI18N
-        getContentPane().add(Fondo_Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
+        getContentPane().add(Fondo_Pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 580));
 
-        setSize(new java.awt.Dimension(843, 550));
+        setSize(new java.awt.Dimension(843, 580));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

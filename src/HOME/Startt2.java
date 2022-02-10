@@ -18,7 +18,6 @@ import HOME.*;
 import VISTA.FAMILIA2;
 import VISTA.FAMILIA3;
 
-
 import java.awt.Dimension;
 import desplazable.Desface;//ACÁ IMPORTÉ LA LIBRERÍA PARA EL MENÚ DESPLAZABLE DE LA DERECHA
 import javax.swing.JLabel;
@@ -36,7 +35,7 @@ public class Startt2 extends javax.swing.JFrame {
     /**
      * Creates new form Startt
      *
-     * @param WinFm1 
+     * @param WinFm1
      * @param WinFm2
      * @param WinFm3
      * @param WindFnidad
@@ -44,62 +43,55 @@ public class Startt2 extends javax.swing.JFrame {
      * @param WinUser
      * @param WinConf
      */
-    public Startt2( FAMILIA2 WinFami,FAMILIA3 WinFamili3 ,Estadisticas es1 ) {
-       // Querys =Querys1;
-            initComponents();
-            //api
-         //   UnidadMedidas = WindFnidad;
-           Estadistica =es1;
-       // JScrollBar barra  = new ScrollBar( );
-            ScrollDesktop.getVerticalScrollBar().setUnitIncrement(15);
-            ScrollDesktop.getHorizontalScrollBar().setUnitIncrement(15);
+    public Startt2(FAMILIA2 WinFami, FAMILIA3 WinFamili3, Estadisticas es1) {
+        // Querys =Querys1;
+        initComponents();
+        //api
+        //   UnidadMedidas = WindFnidad;
+        Estadistica = es1;
+        // JScrollBar barra  = new ScrollBar( );
+        ScrollDesktop.getVerticalScrollBar().setUnitIncrement(15);
+        ScrollDesktop.getHorizontalScrollBar().setUnitIncrement(15);
         Familia2 = WinFami;
-          Familia3 = WinFamili3;
-       
-           
+        Familia3 = WinFamili3;
+
         //    WinCrearBG_1 = WinCrearBG;
-        
-         //   WinConf_1 = WinConf;
+        //   WinConf_1 = WinConf;
         //    CrearProducto = win;
-          JLabel txtEstadisticas1[]={
-            jLabel6,jLabel5,Estadistica.jLabel10,
-            Estadistica.jLabel13,Estadistica.jLabel4,Estadistica.jLabel17,
-            Estadistica.jLabel18,Estadistica.jLabel25,Estadistica.
-            jLabel15,Estadistica.jLabel29,Estadistica.jLabel33,
-            Estadistica.jLabel34,Estadistica.jLabel28,Estadistica.jLabel26,
-            Estadistica.jLabel38,Estadistica.jLabel37,Estadistica.jLabel42
-            ,Estadistica.jLabel39, Estadistica.jLabel11,Estadistica.jLabel24,Estadistica.jLabel22,
-            Estadistica.jLabel12,Estadistica.jLabel36,Estadistica.jLabel30,Estadistica.jLabel3
+        JLabel txtEstadisticas1[] = {
+            jLabel6, jLabel5, Estadistica.jLabel10,
+            Estadistica.jLabel13, Estadistica.jLabel4, Estadistica.jLabel17,
+            Estadistica.jLabel18, Estadistica.jLabel25, Estadistica.jLabel15, Estadistica.jLabel29, Estadistica.jLabel33,
+            Estadistica.jLabel34, Estadistica.jLabel28, Estadistica.jLabel26,
+            Estadistica.jLabel38, Estadistica.jLabel37, Estadistica.jLabel42,
+             Estadistica.jLabel39, Estadistica.jLabel11, Estadistica.jLabel24, Estadistica.jLabel22,
+            Estadistica.jLabel12, Estadistica.jLabel36, Estadistica.jLabel30, Estadistica.jLabel3
         };
-        txtEstadisticas=txtEstadisticas1;
-        JSeparator Separador1[]={
-            /*jSeparator3,jSeparator1,
+        txtEstadisticas = txtEstadisticas1;
+        JSeparator Separador1[] = { /*jSeparator3,jSeparator1,
             Estadistica.jSeparator6,Estadistica.jSeparator7,
             Estadistica.jSeparator5,Estadistica.jSeparator8,
-            Estadistica.jSeparator9,Estadistica.jSeparator10*/
-        };
-          Separador=Separador1;
-            JLabel Estrellas1[]={Estadistica.ESTRELLA_4,Estadistica.ESTRELLAS_1,
-            Estadistica.ESTRELLA_2,Estadistica.ESTRELLA_3,Estadistica.ESTRELLA_4,
-            Estadistica.ESTRELLA_5,Estadistica.ESTRELLA_6,Estadistica. ESTRELLA_7,
-            Estadistica.ESTRELLA_8, Estadistica.ESTRELLA_9,Estadistica.ESTRELLA_10,Estadistica. ESTRELLA_11,
-            Estadistica.ESTRELLA_12,Estadistica.ESTRELLA_13,Estadistica.ESTRELLA_14,Estadistica.
-            ESTRELLA_15, Estadistica.ESTRELLA_16, Estadistica.ESTRELLA_17,
-            estrella_1,estrella_2,estrella_3,
-            estrella4, estrella_5,estrella_6,
+            Estadistica.jSeparator9,Estadistica.jSeparator10*/};
+        Separador = Separador1;
+        JLabel Estrellas1[] = {Estadistica.ESTRELLA_4, Estadistica.ESTRELLAS_1,
+            Estadistica.ESTRELLA_2, Estadistica.ESTRELLA_3, Estadistica.ESTRELLA_4,
+            Estadistica.ESTRELLA_5, Estadistica.ESTRELLA_6, Estadistica.ESTRELLA_7,
+            Estadistica.ESTRELLA_8, Estadistica.ESTRELLA_9, Estadistica.ESTRELLA_10, Estadistica.ESTRELLA_11,
+            Estadistica.ESTRELLA_12, Estadistica.ESTRELLA_13, Estadistica.ESTRELLA_14, Estadistica.ESTRELLA_15, Estadistica.ESTRELLA_16, Estadistica.ESTRELLA_17,
+            estrella_1, estrella_2, estrella_3,
+            estrella4, estrella_5, estrella_6,
             estrella_7, estrella_8, estrella_9};
-            Extrellas=Estrellas1;
-            JLabel Hojas1[]={Estadistica.HOJA_3,Estadistica.HOJA_4,Estadistica.HOJA_5,Estadistica.HOJA_6,
-            Estadistica.HOJA_7, Estadistica.HOJA_8,Estadistica.HOJA_9,Estadistica.HOJA_10,Estadistica.HOJA_11,Estadistica.
-            HOJA_12,Estadistica. HOJA_13,Estadistica.HOJA_14,
-            Estadistica.HOJA_15,Estadistica.HOJA_16,Estadistica.HOJA_17,
-            hoja_1,hoja_2, hoja_3,
+        Extrellas = Estrellas1;
+        JLabel Hojas1[] = {Estadistica.HOJA_3, Estadistica.HOJA_4, Estadistica.HOJA_5, Estadistica.HOJA_6,
+            Estadistica.HOJA_7, Estadistica.HOJA_8, Estadistica.HOJA_9, Estadistica.HOJA_10, Estadistica.HOJA_11, Estadistica.HOJA_12, Estadistica.HOJA_13, Estadistica.HOJA_14,
+            Estadistica.HOJA_15, Estadistica.HOJA_16, Estadistica.HOJA_17,
+            hoja_1, hoja_2, hoja_3,
             hoja_4, hoja_5, hoja_6,
-            hoja_7,hoja_8,hoja_9,
-            estrella_10,Estadistica.HOJA_1,Estadistica.HOJA_2,};
-            Hojas =Hojas1;
-            
-            JButton BTN1[]={
+            hoja_7, hoja_8, hoja_9,
+            estrella_10, Estadistica.HOJA_1, Estadistica.HOJA_2,};
+        Hojas = Hojas1;
+
+        JButton BTN1[] = {
             Estadistica.BTN_HOY,
             Estadistica.BTN_AYER,
             Estadistica.BTN_SEMANA,
@@ -108,9 +100,9 @@ public class Startt2 extends javax.swing.JFrame {
             Estadistica.BTN_USUARIOS,
             Estadistica.BTN_FECHA,
             Estadistica.BTN_BUSCAR};
-            BTN=BTN1;
-           
-            JLabel Text1[]={
+        BTN = BTN1;
+
+        JLabel Text1[] = {
             Estadistica.jLabel14,
             Estadistica.jLabel4,
             Estadistica.jLabel1,
@@ -124,21 +116,20 @@ public class Startt2 extends javax.swing.JFrame {
             Estadistica.jLabel35,
             Estadistica.jLabel34
         };
-             Text=Text1;
-            JButton Botones_Panel1[]={
+        Text = Text1;
+        JButton Botones_Panel1[] = {
             BtLicencia,
             jButton2,
             BTN_CLIENTES,
             BTN_VENTAS,
             BTN_ALMACEN,
             BTN_PRODUCTOS,
-            jButton7,
-           // txt_CONFIGURACION,
-            //txt_CHATBOT,
-            //txt_BUSQUEDA
-            };
-        Botones_Panel=Botones_Panel1;
-            JPanel PanelEstadisticas1[]={
+            jButton7, // txt_CONFIGURACION,
+        //txt_CHATBOT,
+        //txt_BUSQUEDA
+        };
+        Botones_Panel = Botones_Panel1;
+        JPanel PanelEstadisticas1[] = {
             Estadistica.Panel_Ganancias,
             Estadistica.jPanel10,
             Estadistica.jPanel8,
@@ -151,23 +142,22 @@ public class Startt2 extends javax.swing.JFrame {
             Estadistica.jPanel14,
             Estadistica.jPanel15
         };
-        PanelEstadisticas=PanelEstadisticas1;
-        JPanel Lateal1[]={
+        PanelEstadisticas = PanelEstadisticas1;
+        JPanel Lateal1[] = {
             Menu_deslizable_Panel_Contenedor_Botones,
             Menu_Lateral_Izquierdo,
             jPanel3
         };
-        Lateal=Lateal1;
-      
-        ActivarHojas(false);  
+        Lateal = Lateal1;
+
+        ActivarHojas(false);
         Iconos_Off.setVisible(true);
         Iconos_True.setVisible(false);
         //////////////
-  
+
         desplace = new Desface();// ESTA TAMBIÉN ES DEL MENÚ DESPLAZABLE
         setExtendedState(MAXIMIZED_BOTH);//ACÁ MAXIMIZA LA VENTANA PRINCIPAL
-        
-    
+
         for (JButton btn : Botones_Panel) {
             btn.setBackground(new Color(21, 25, 28));
             btn.setUI(new BasicButtonUI());
@@ -198,100 +188,106 @@ public class Startt2 extends javax.swing.JFrame {
                 }
             });
         }
-        CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas, Estadistica.Home, Lateal,Separador);
+        CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas, Estadistica.Home, Lateal, Separador);
     }
 
     private Startt2() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    //Funcion para ModoClaro_Oscuro
-       public void CambiarModo(boolean Activador,JButton BTN [],JLabel Text[],JButton Botones_Panel[],
-        JPanel PanelEstadisticas[],JLabel txtEstadisticas[],JPanel Fondo,JPanel Lateal[],JSeparator Separador[])
-       {
-            for(int i=0; i< Botones_Panel.length;i++){
-                Botones_Panel[i].setBackground(null);
-            }
-            if (Iconos_True.isVisible()) {
-               ActivarHojas(true);
-            ActivarEstrellas(false);
-           }else{
-                     ActivarHojas(false);
-                    ActivarEstrellas(false);
-                }
-            
-               BTN_MODO_NOCHE.setVisible(Activador);//OCULTA EL BOTON MODO OSCURO
-               TXT_NOCHE.setVisible(Activador);//OCULTA EL TEXTO MODO OSCURO
-               BTN_MODO_DIA.setVisible(!Activador);//OCULTA EL BOTON MODO OSCURO
-               TXT_DIA.setVisible(!Activador);//OCULTA EL TEXTO MODO OSCURO
-               Estadistica.logo_oscuro.setVisible(Activador);
-              Estadistica. logo_claro.setVisible(!Activador);
-            if(Activador ==true){
-                IconosModo=true;
-                for (int i = 0; i < BTN.length ; i++) {
-                    BTN[i].setBackground(new Color(153, 153, 153));
-                    BTN[i].setForeground(Color.black);
-                }
-                for(int i =0;i<Text.length ;i++){
-                    Text[i].setForeground(new Color(255, 255, 7));
-                }for(int i =0;i<PanelEstadisticas.length ;i++){
-                    PanelEstadisticas[i].setBackground(Color.lightGray);
-                }for(int i =0;i<txtEstadisticas.length ;i++){
-                    txtEstadisticas[i].setForeground(Color.BLACK);
-                }
-                HomePrincipal.setBackground(Color.white);
-                Estadistica.Home.setBackground(Color.white);
-                for (int i = 0; i < Lateal.length ; i++) {
-                    Lateal[i].setBackground(Color.GRAY);
-                }for(int i = 0; i < Separador.length ; i++){
-                     Separador[i].setBackground(Color.BLACK);
-                     Separador[i].setForeground(Color.BLACK);
-                }
 
-            }else{
-                if (Iconos_True.isVisible()) {
-                    ActivarHojas(false);
-                    ActivarEstrellas(true);}else{
-                     ActivarHojas(false);
-                    ActivarEstrellas(false);
-                }
-                    IconosModo=false;
-                for (int i = 0; i < BTN.length ; i++) {
-                    BTN[i].setBackground(new Color(11, 24, 29));
-                    BTN[i].setForeground(Color.WHITE);
-                }
-                for(int i =0;i<Text.length ;i++){
-                    Text[i].setForeground(new Color(255, 255, 7));
-                }for(int i =0;i<PanelEstadisticas.length ;i++){
-                    PanelEstadisticas[i].setBackground(new Color(1, 1, 1));
-                }for(int i =0;i<txtEstadisticas.length ;i++){
-                    txtEstadisticas[i].setForeground(Color.WHITE);
-                }
-                HomePrincipal.setBackground(new Color(10, 15, 42));
-                Estadistica.Home.setBackground(new Color(10, 15, 42));
-                for (int i = 0; i < Lateal.length ; i++) {
-                    Lateal[i].setBackground(new Color(7, 16, 19));
-                }for(int i = 0; i < Separador.length ; i++){
-                     Separador[i].setBackground(Color.WHITE);
-                     Separador[i].setForeground(Color.WHITE);
-                }
+    //Funcion para ModoClaro_Oscuro
+    public void CambiarModo(boolean Activador, JButton BTN[], JLabel Text[], JButton Botones_Panel[],
+            JPanel PanelEstadisticas[], JLabel txtEstadisticas[], JPanel Fondo, JPanel Lateal[], JSeparator Separador[]) {
+        for (int i = 0; i < Botones_Panel.length; i++) {
+            Botones_Panel[i].setBackground(null);
+        }
+        if (Iconos_True.isVisible()) {
+            ActivarHojas(true);
+            ActivarEstrellas(false);
+        } else {
+            ActivarHojas(false);
+            ActivarEstrellas(false);
+        }
+
+        BTN_MODO_NOCHE.setVisible(Activador);//OCULTA EL BOTON MODO OSCURO
+        TXT_NOCHE.setVisible(Activador);//OCULTA EL TEXTO MODO OSCURO
+        BTN_MODO_DIA.setVisible(!Activador);//OCULTA EL BOTON MODO OSCURO
+        TXT_DIA.setVisible(!Activador);//OCULTA EL TEXTO MODO OSCURO
+        Estadistica.logo_oscuro.setVisible(Activador);
+        Estadistica.logo_claro.setVisible(!Activador);
+        if (Activador == true) {
+            IconosModo = true;
+            for (int i = 0; i < BTN.length; i++) {
+                BTN[i].setBackground(new Color(153, 153, 153));
+                BTN[i].setForeground(Color.black);
+            }
+            for (int i = 0; i < Text.length; i++) {
+                Text[i].setForeground(new Color(255, 255, 7));
+            }
+            for (int i = 0; i < PanelEstadisticas.length; i++) {
+                PanelEstadisticas[i].setBackground(Color.lightGray);
+            }
+            for (int i = 0; i < txtEstadisticas.length; i++) {
+                txtEstadisticas[i].setForeground(Color.BLACK);
+            }
+            HomePrincipal.setBackground(Color.white);
+            Estadistica.Home.setBackground(Color.white);
+            for (int i = 0; i < Lateal.length; i++) {
+                Lateal[i].setBackground(Color.GRAY);
+            }
+            for (int i = 0; i < Separador.length; i++) {
+                Separador[i].setBackground(Color.BLACK);
+                Separador[i].setForeground(Color.BLACK);
+            }
+
+        } else {
+            if (Iconos_True.isVisible()) {
+                ActivarHojas(false);
+                ActivarEstrellas(true);
+            } else {
+                ActivarHojas(false);
+                ActivarEstrellas(false);
+            }
+            IconosModo = false;
+            for (int i = 0; i < BTN.length; i++) {
+                BTN[i].setBackground(new Color(11, 24, 29));
+                BTN[i].setForeground(Color.WHITE);
+            }
+            for (int i = 0; i < Text.length; i++) {
+                Text[i].setForeground(new Color(255, 255, 7));
+            }
+            for (int i = 0; i < PanelEstadisticas.length; i++) {
+                PanelEstadisticas[i].setBackground(new Color(1, 1, 1));
+            }
+            for (int i = 0; i < txtEstadisticas.length; i++) {
+                txtEstadisticas[i].setForeground(Color.WHITE);
+            }
+            HomePrincipal.setBackground(new Color(10, 15, 42));
+            Estadistica.Home.setBackground(new Color(10, 15, 42));
+            for (int i = 0; i < Lateal.length; i++) {
+                Lateal[i].setBackground(new Color(7, 16, 19));
+            }
+            for (int i = 0; i < Separador.length; i++) {
+                Separador[i].setBackground(Color.WHITE);
+                Separador[i].setForeground(Color.WHITE);
             }
         }
+    }
+
     //ActivarHojas
-    public void ActivarHojas(boolean x){
-        for (int i = 0; i < Hojas.length ; i++) {
+    public void ActivarHojas(boolean x) {
+        for (int i = 0; i < Hojas.length; i++) {
             Hojas[i].setVisible(x);
         }
     }
+
     //Activar Estrellas
-    public void ActivarEstrellas(boolean x){
-    for (int i = 0; i < Extrellas.length ; i++) {
+    public void ActivarEstrellas(boolean x) {
+        for (int i = 0; i < Extrellas.length; i++) {
             Extrellas[i].setVisible(x);
         }
     }
     //Activar Modo Oscuro
-       
-  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -333,8 +329,8 @@ public class Startt2 extends javax.swing.JFrame {
         hoja_2 = new javax.swing.JLabel();
         hoja_3 = new javax.swing.JLabel();
         hoja_4 = new javax.swing.JLabel();
-        hoja_5 = new javax.swing.JLabel();
         hoja_6 = new javax.swing.JLabel();
+        hoja_5 = new javax.swing.JLabel();
         hoja_7 = new javax.swing.JLabel();
         hoja_8 = new javax.swing.JLabel();
         hoja_9 = new javax.swing.JLabel();
@@ -362,7 +358,7 @@ public class Startt2 extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(7, 16, 19));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Estadisticos_42px.png"))); // NOI18N
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setPreferredSize(new java.awt.Dimension(40, 40));
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -379,7 +375,7 @@ public class Startt2 extends javax.swing.JFrame {
         BTN_CLIENTES.setBackground(new java.awt.Color(7, 16, 19));
         BTN_CLIENTES.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/AAgregar_Usuario.png"))); // NOI18N
         BTN_CLIENTES.setMnemonic('C');
-        BTN_CLIENTES.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BTN_CLIENTES.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTN_CLIENTES.setPreferredSize(new java.awt.Dimension(40, 40));
         BTN_CLIENTES.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -399,7 +395,7 @@ public class Startt2 extends javax.swing.JFrame {
         BTN_VENTAS.setBackground(new java.awt.Color(7, 16, 19));
         BTN_VENTAS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Money_42PX.png"))); // NOI18N
         BTN_VENTAS.setMnemonic('V');
-        BTN_VENTAS.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BTN_VENTAS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTN_VENTAS.setPreferredSize(new java.awt.Dimension(40, 40));
         BTN_VENTAS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -419,7 +415,7 @@ public class Startt2 extends javax.swing.JFrame {
         BTN_ALMACEN.setBackground(new java.awt.Color(7, 16, 19));
         BTN_ALMACEN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Bodega_42Px.png"))); // NOI18N
         BTN_ALMACEN.setMnemonic('A');
-        BTN_ALMACEN.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BTN_ALMACEN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTN_ALMACEN.setPreferredSize(new java.awt.Dimension(40, 40));
         BTN_ALMACEN.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -439,7 +435,7 @@ public class Startt2 extends javax.swing.JFrame {
         BTN_PRODUCTOS.setBackground(new java.awt.Color(7, 16, 19));
         BTN_PRODUCTOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Producto_New_32Px.png"))); // NOI18N
         BTN_PRODUCTOS.setMnemonic('P');
-        BTN_PRODUCTOS.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BTN_PRODUCTOS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTN_PRODUCTOS.setPreferredSize(new java.awt.Dimension(40, 40));
         BTN_PRODUCTOS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -458,7 +454,7 @@ public class Startt2 extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(7, 16, 19));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Resumen.png"))); // NOI18N
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.setPreferredSize(new java.awt.Dimension(40, 40));
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -475,7 +471,7 @@ public class Startt2 extends javax.swing.JFrame {
 
         BTN_MODO_NOCHE.setBackground(new java.awt.Color(7, 16, 19));
         BTN_MODO_NOCHE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_toggle_on_32px.png"))); // NOI18N
-        BTN_MODO_NOCHE.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BTN_MODO_NOCHE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTN_MODO_NOCHE.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BTN_MODO_NOCHEMouseClicked(evt);
@@ -488,7 +484,7 @@ public class Startt2 extends javax.swing.JFrame {
 
         BTN_MODO_DIA.setBackground(new java.awt.Color(21, 25, 28));
         BTN_MODO_DIA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_toggle_off_32px.png"))); // NOI18N
-        BTN_MODO_DIA.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BTN_MODO_DIA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTN_MODO_DIA.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BTN_MODO_DIAMouseClicked(evt);
@@ -533,14 +529,14 @@ public class Startt2 extends javax.swing.JFrame {
 
         BtLicencia.setBackground(new java.awt.Color(7, 16, 19));
         BtLicencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Licencia_32PX.png"))); // NOI18N
-        BtLicencia.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BtLicencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtLicencia.setPreferredSize(new java.awt.Dimension(40, 40));
         BtLicencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtLicenciaActionPerformed(evt);
             }
         });
-        Menu_Lateral_Izquierdo.add(BtLicencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 40, 50));
+        Menu_Lateral_Izquierdo.add(BtLicencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 570, 40, 50));
 
         estrella_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_star_filled_15px.png"))); // NOI18N
         Menu_Lateral_Izquierdo.add(estrella_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 20, 40));
@@ -565,10 +561,10 @@ public class Startt2 extends javax.swing.JFrame {
 
         hoja_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_bug_15px.png"))); // NOI18N
         Menu_Lateral_Izquierdo.add(hoja_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 20, 40));
+        Menu_Lateral_Izquierdo.add(hoja_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 10, 40));
 
         hoja_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_cactus_15px.png"))); // NOI18N
         Menu_Lateral_Izquierdo.add(hoja_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 20, 40));
-        Menu_Lateral_Izquierdo.add(hoja_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 20, 40));
 
         hoja_7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_bug_15px.png"))); // NOI18N
         Menu_Lateral_Izquierdo.add(hoja_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 610, 20, 40));
@@ -586,32 +582,32 @@ public class Startt2 extends javax.swing.JFrame {
         Iconos_True.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Iconos_True.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_checked_checkbox_32px.png"))); // NOI18N
         Iconos_True.setToolTipText("APAGAR ICONOS");
-        Iconos_True.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Iconos_True.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Iconos_True.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         Iconos_True.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Iconos_TrueMouseClicked(evt);
             }
         });
-        Menu_Lateral_Izquierdo.add(Iconos_True, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 40, 40));
+        Menu_Lateral_Izquierdo.add(Iconos_True, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 500, 40, 40));
 
         Iconos_Off.setForeground(new java.awt.Color(255, 255, 255));
         Iconos_Off.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Iconos_Off.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/icons8_unchecked_checkbox_32px.png"))); // NOI18N
         Iconos_Off.setToolTipText("ENCENDER ICONOS");
-        Iconos_Off.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Iconos_Off.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Iconos_Off.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         Iconos_Off.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Iconos_OffMouseClicked(evt);
             }
         });
-        Menu_Lateral_Izquierdo.add(Iconos_Off, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 40, 40));
+        Menu_Lateral_Izquierdo.add(Iconos_Off, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 500, 40, 40));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("ICONOS");
-        Menu_Lateral_Izquierdo.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, -1, -1));
+        Menu_Lateral_Izquierdo.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 540, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(51, 0, 51));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -735,8 +731,8 @@ public class Startt2 extends javax.swing.JFrame {
                 .addContainerGap(47, Short.MAX_VALUE))
             .addGroup(HomePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(HomePrincipalLayout.createSequentialGroup()
-                    .addComponent(ScrollDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 91, Short.MAX_VALUE)))
+                    .addComponent(ScrollDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, 739, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 41, Short.MAX_VALUE)))
         );
 
         jPanel1.add(HomePrincipal, java.awt.BorderLayout.CENTER);
@@ -751,7 +747,7 @@ public class Startt2 extends javax.swing.JFrame {
         //-----> SALIDA HACIA LA DERECHA EL TEXTO DE AGREGAR USUARIO
         Color AG_USUARIOS_AZUL = new Color(54, 81, 207);
         BTN_CLIENTES.setBackground(AG_USUARIOS_AZUL);
-        
+
     }//GEN-LAST:event_BTN_CLIENTESMouseEntered
 
     private void BTN_CLIENTESMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_CLIENTESMouseExited
@@ -802,14 +798,14 @@ public class Startt2 extends javax.swing.JFrame {
         txt_BUSQUEDA.setBackground(null);
     }//GEN-LAST:event_txt_BUSQUEDAMouseExited
 
-  
+
     private void BTN_MODO_NOCHEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_MODO_NOCHEMouseClicked
-CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas, Estadistica.Home, Lateal,Separador);
-    
+        CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas, Estadistica.Home, Lateal, Separador);
+
     }//GEN-LAST:event_BTN_MODO_NOCHEMouseClicked
 
     private void BTN_MODO_DIAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_MODO_DIAMouseClicked
-        CambiarModo(true, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas, Estadistica.Home, Lateal,Separador);
+        CambiarModo(true, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas, Estadistica.Home, Lateal, Separador);
 
     }//GEN-LAST:event_BTN_MODO_DIAMouseClicked
 
@@ -835,10 +831,10 @@ CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas,
     private void txt_CONFIGURACIONMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_CONFIGURACIONMouseClicked
 //        general.OpenWindows(WinConf_1, null);        // TODO add your handling code here:
     }//GEN-LAST:event_txt_CONFIGURACIONMouseClicked
-   
-    
+
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-  general.AbrirJInternalFrame(Estadistica, DeskPanel, null, true);
+        general.AbrirJInternalFrame(Estadistica, DeskPanel, null, true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void BTN_CLIENTESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_CLIENTESActionPerformed
@@ -851,21 +847,21 @@ CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas,
         Iconos_True.setVisible(false);
         ////////////////
         ActivarEstrellas(false);
-        ActivarHojas(false);        
-    
-        
+        ActivarHojas(false);
+
+
     }//GEN-LAST:event_Iconos_TrueMouseClicked
 
     private void Iconos_OffMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Iconos_OffMouseClicked
         Iconos_Off.setVisible(false);
         Iconos_True.setVisible(true);
         if (IconosModo) {
-             ActivarHojas(true);
-        }else{
+            ActivarHojas(true);
+        } else {
             ActivarEstrellas(true);
         }
 
-       
+
     }//GEN-LAST:event_Iconos_OffMouseClicked
 
     private void BtLicenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtLicenciaActionPerformed
@@ -873,9 +869,9 @@ CambiarModo(false, BTN, Text, Botones_Panel, PanelEstadisticas, txtEstadisticas,
     }//GEN-LAST:event_BtLicenciaActionPerformed
 
     private void BTN_VENTASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_VENTASActionPerformed
-general.OpenWindows(Familia2, jPanel1);
-     //   general.AbrirJInternalFrame(UnidadMedidas, DeskPanel, Querys, false);
-       
+        general.OpenWindows(Familia2, jPanel1);
+        //   general.AbrirJInternalFrame(UnidadMedidas, DeskPanel, Querys, false);
+
 //general.OpenWindows(WinUser_1, jPanel1);
     }//GEN-LAST:event_BTN_VENTASActionPerformed
 
@@ -945,18 +941,18 @@ general.OpenWindows(Familia2, jPanel1);
     }//GEN-LAST:event_BTN_MODO_NOCHEMouseEntered
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        
-                // TODO add your handling code here:
+
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void BTN_ALMACENActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ALMACENActionPerformed
-general.OpenWindows(Familia3, jPanel1);
+        general.OpenWindows(Familia3, jPanel1);
 //        general.AbrirJInternalFrame(Familia1, DeskPanel, Querys, false);
         // TODO add your handling code here:
     }//GEN-LAST:event_BTN_ALMACENActionPerformed
 
     private void BTN_PRODUCTOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_PRODUCTOSActionPerformed
-   //   general.AbrirJInternalFrame(Familia2, DeskPanel, Querys, false);
+        //   general.AbrirJInternalFrame(Familia2, DeskPanel, Querys, false);
     }//GEN-LAST:event_BTN_PRODUCTOSActionPerformed
 
     /**
@@ -986,7 +982,7 @@ general.OpenWindows(Familia3, jPanel1);
         }
         //</editor-fold>
         //</editor-fold>
-   
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -996,19 +992,19 @@ general.OpenWindows(Familia3, jPanel1);
     }
 
     public Estadisticas Estadistica;
-        public FAMILIA3 Familia3;
+    public FAMILIA3 Familia3;
     public FAMILIA2 Familia2;
     public JSeparator Separador[];
-    public  JLabel txtEstadisticas[];
+    public JLabel txtEstadisticas[];
     public JPanel Lateal[];
     public JPanel PanelEstadisticas[];
     public JButton Botones_Panel[];
     public JLabel Text[];
-    public JButton BTN[]={};
-    private  MySQL_Query Querys;   
+    public JButton BTN[] = {};
+    private MySQL_Query Querys;
     public boolean IconosModo = false;
-    public JLabel[] Hojas={};
-    public JLabel [] Extrellas={};
+    public JLabel[] Hojas = {};
+    public JLabel[] Extrellas = {};
     public GENERAL_CLASS general = new GENERAL_CLASS();
 
 //    public FAMILIA3 WinFm3_1;
